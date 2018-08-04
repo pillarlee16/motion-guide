@@ -59,6 +59,7 @@
   background-color: grey;
   color: white;
   font-size: 12px;
+  text-align: center;
 }
 
 .tween .tween__duration_bar {

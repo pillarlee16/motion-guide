@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Timeline.css';
+import './index.css';
 
 import Tween from './Tween.js';
 

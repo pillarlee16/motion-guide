@@ -1,14 +1,7 @@
 .timeline {
-  position: absolute;
-  left: 200px;
-  top: 100px;
+  position: relative;
   width: 1070px;
   height: 400px;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-
-  --tween-area-width: 800px;
-  --tween-area-height: 400px;
-  --tween-area-grid-margin: 20px;
 }
 
 .timeline .inner {
