@@ -1,166 +1,191 @@
 import React, { Component } from 'react';
+import store from '../../store';
+
 import './index.css';
 
 import Tween from './Tween.js';
 
 
-const data = {
-  tweens: [
-    {
-      objectID: '1',
-      duration: 300,
-      delay: 500,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'Airy',
-    },
-    {
-      objectID: '1',
-      duration: 400,
-      delay: 1200,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'BounceBack',
-    },
-    {
-      objectID: '2',
-      duration: 600,
-      delay: 500,
-      property: 'Position',
-      from: [0, 0],
-      to: [100, 0],
-      easing: 'Basic',
-    },
-    {
-      objectID: '3',
-      duration: 300,
-      delay: 500,
-      property: 'Scale',
-      from: ['100%', 0],
-      to: ['110%', 0],
-      easing: 'SineEaseOut',
-    },
-    {
-      objectID: '1',
-      duration: 300,
-      delay: 500,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'Airy',
-    },
-    {
-      objectID: '1',
-      duration: 400,
-      delay: 1200,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'BounceBack',
-    },
-    {
-      objectID: '2',
-      duration: 600,
-      delay: 500,
-      property: 'Position',
-      from: [0, 0],
-      to: [100, 0],
-      easing: 'Basic',
-    },
-    {
-      objectID: '3',
-      duration: 300,
-      delay: 500,
-      property: 'Scale',
-      from: ['100%', 0],
-      to: ['110%', 0],
-      easing: 'SineEaseOut',
-    },
-    {
-      objectID: '1',
-      duration: 300,
-      delay: 500,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'Airy',
-    },
-    {
-      objectID: '1',
-      duration: 400,
-      delay: 1200,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'BounceBack',
-    },
-    {
-      objectID: '2',
-      duration: 600,
-      delay: 500,
-      property: 'Position',
-      from: [0, 0],
-      to: [100, 0],
-      easing: 'Basic',
-    },
-    {
-      objectID: '3',
-      duration: 300,
-      delay: 500,
-      property: 'Scale',
-      from: ['100%', 0],
-      to: ['110%', 0],
-      easing: 'SineEaseOut',
-    },
-    {
-      objectID: '1',
-      duration: 300,
-      delay: 500,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'Airy',
-    },
-    {
-      objectID: '1',
-      duration: 400,
-      delay: 1200,
-      property: 'Opacity',
-      from: [0],
-      to: [1],
-      easing: 'BounceBack',
-    },
-    {
-      objectID: '2',
-      duration: 600,
-      delay: 500,
-      property: 'Position',
-      from: [0, 0],
-      to: [100, 0],
-      easing: 'Basic',
-    },
-    {
-      objectID: '3',
-      duration: 300,
-      delay: 500,
-      property: 'Scale',
-      from: ['100%', 0],
-      to: ['110%', 0],
-      easing: 'SineEaseOut',
-    },
-  ],
-};
+// const data = {
+//   tweens: [
+//     {
+//       objectID: '1',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'Airy',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 400,
+//       delay: 1200,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'BounceBack',
+//     },
+//     {
+//       objectID: '2',
+//       duration: 600,
+//       delay: 500,
+//       property: 'Position',
+//       from: [0, 0],
+//       to: [100, 0],
+//       easing: 'Basic',
+//     },
+//     {
+//       objectID: '3',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Scale',
+//       from: ['100%', 0],
+//       to: ['110%', 0],
+//       easing: 'SineEaseOut',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'Airy',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 400,
+//       delay: 1200,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'BounceBack',
+//     },
+//     {
+//       objectID: '2',
+//       duration: 600,
+//       delay: 500,
+//       property: 'Position',
+//       from: [0, 0],
+//       to: [100, 0],
+//       easing: 'Basic',
+//     },
+//     {
+//       objectID: '3',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Scale',
+//       from: ['100%', 0],
+//       to: ['110%', 0],
+//       easing: 'SineEaseOut',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'Airy',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 400,
+//       delay: 1200,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'BounceBack',
+//     },
+//     {
+//       objectID: '2',
+//       duration: 600,
+//       delay: 500,
+//       property: 'Position',
+//       from: [0, 0],
+//       to: [100, 0],
+//       easing: 'Basic',
+//     },
+//     {
+//       objectID: '3',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Scale',
+//       from: ['100%', 0],
+//       to: ['110%', 0],
+//       easing: 'SineEaseOut',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'Airy',
+//     },
+//     {
+//       objectID: '1',
+//       duration: 400,
+//       delay: 1200,
+//       property: 'Opacity',
+//       from: [0],
+//       to: [1],
+//       easing: 'BounceBack',
+//     },
+//     {
+//       objectID: '2',
+//       duration: 600,
+//       delay: 500,
+//       property: 'Position',
+//       from: [0, 0],
+//       to: [100, 0],
+//       easing: 'Basic',
+//     },
+//     {
+//       objectID: '3',
+//       duration: 300,
+//       delay: 500,
+//       property: 'Scale',
+//       from: ['100%', 0],
+//       to: ['110%', 0],
+//       easing: 'SineEaseOut',
+//     },
+//   ],
+// };
 
-console.log(data);
+// console.log(data);
 
 const MAX_DURATION = 3000;
 
 class Timeline extends Component {
+  constructor(props) {
+    super(props);
+
+    const storeState = store.getState();
+    this.state = {
+      tweens: [ ...storeState.tweens ],
+    };
+
+    this.handleStoreChange = this.handleStoreChange.bind(this);
+
+    store.subscribe(this.handleStoreChange);
+  }
+
+  handleStoreChange() {
+    const prevTweens = this.state.tweens;
+    const currTweens = store.getState().tweens;
+
+    if (prevTweens !== currTweens) {
+      this.setState({ tweens: [ ...currTweens ] });
+    }
+  }
+
   render() {
 
-    const tweens = data.tweens;
+    // const tweens = data.tweens;
+    const tweens = this.state.tweens;
 
     return (
       <div className="timeline">

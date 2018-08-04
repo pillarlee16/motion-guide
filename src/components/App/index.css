@@ -7,24 +7,35 @@
   overflow: hidden;
 }
 
-.app .app__editor {
+.app .app__left_section {
   position: absolute;
   left: 0;
   top: 0;
-  width: 600px;
+  width: 260px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
+  
 }
 
-.app .app__timeline {
+.app .app__center_section {
   position: absolute;
-  left: 600px;
+  left: 260px;
   top: 0px;
-  width: calc(100% - 600px);
+  width: calc(100% - 520px);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow: scroll;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.app .app__right_section {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
 }
