@@ -1,0 +1,124 @@
+.tween {
+  position: relative;
+  padding-top: 6px;
+  width: 100%;
+  height: 56px;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+
+.tween .tween__bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  background-color: rgb(255, 72, 72);
+  background-clip: content-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tween .tween__delay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 30px;
+  /* background-color: rgba(255, 0, 0, 0.3); */
+  background-clip: content-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tween .tween__left_boundary,
+.tween .tween__right_boundary {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 56px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.tween .tween__left_boundary {
+  left: 0;
+}
+
+.tween .tween__right_boundary {
+  right: 0;
+}
+
+.tween .tween__duration {
+  position: absolute;
+  top: -20px;
+  width: 50px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  font-size: 12px;
+}
+
+.tween .tween__duration_bar {
+  position: absolute;
+  top: -12px;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.tween__property {
+  position: absolute;
+  left: -110px;
+  bottom: 2px;
+  width: 80px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tween .tween__easing {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 80px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tween .tween__from {
+  position: absolute;
+  left: 5px;
+  font-size: 12px;
+
+}
+
+.tween .tween__to {
+  position: absolute;
+  right: 5px;
+  font-size: 12px;
+}
+
+.tween .tween__object_id {
+  position: absolute;
+  bottom: 0px;
+  left: -160px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  box-sizing: border-box;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
